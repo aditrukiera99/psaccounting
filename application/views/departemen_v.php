@@ -4,16 +4,14 @@
 		<div class="page-title">
 			<h4>
 				<i class="icon-arrow-left52 position-left"></i>
-				<span class="text-semibold">Home</span> - Dashboard
-				<small class="display-block">Good morning, Victoria Baker!</small>
+				<span class="text-semibold">Perusahaan </span> - Departemen
+				<small class="display-block">Data departemen perusahaan</small>
 			</h4>
 		</div>
 
 		<div class="heading-elements">
-			<div class="heading-btn-group">
-				<a href="#" class="btn btn-link btn-float has-text text-size-small"><i class="icon-bars-alt text-indigo-400"></i><span>Statistics</span></a>
-				<a href="#" class="btn btn-link btn-float has-text text-size-small"><i class="icon-calculator text-indigo-400"></i> <span>Invoices</span></a>
-				<a href="#" class="btn btn-link btn-float has-text text-size-small"><i class="icon-calendar5 text-indigo-400"></i> <span>Schedule</span></a>
+			<div class="heading-btn-group" style="margin-top: -10px;">
+				<a href="#" class="btn btn-success btn-float "><i class="icon-plus-circle2"></i><span>Tambah Data</span></a>
 			</div>
 		</div>
 	</div>
@@ -33,11 +31,11 @@
     	</div>
 	</div>
 
-	<table class="table datatable-basic">
+	<table class="table table-bordered datatable-basic">
 		<thead>
 			<tr>
-				<th>Kode Departemen</th>
-				<th>Nama Departemen</th>
+				<th class="bg-slate">Kode Departemen</th>
+				<th class="bg-slate">Nama Departemen</th>
 			</tr>
 		</thead>
 		<tbody>

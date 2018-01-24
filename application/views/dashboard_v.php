@@ -33,9 +33,12 @@
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/ui/moment/moment.min.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/daterangepicker.js"></script>
 
-	<script type="text/javascript" src="<?=base_url();?>material/assets/js/core/app.js"></script>
-	<!-- <script type="text/javascript" src="<?=base_url();?>material/assets/js/pages/dashboard.js"></script> -->
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/forms/selects/select2.min.js"></script>
 
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/core/app.js"></script>
+
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/pages/datatables_basic.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
 

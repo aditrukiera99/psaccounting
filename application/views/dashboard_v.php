@@ -112,6 +112,7 @@
 						<div class="dropdown-content-body">
 							<div class="row">
 								<div class="col-md-3">
+									<span class="menu-heading underlined">Menu Perusahaan</span>
 									<ul class="menu-list">
 										<li>
 											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Departemen</a>
@@ -135,45 +136,47 @@
 									</ul>
 								</div>
 								<div class="col-md-3">
+									<span class="menu-heading underlined">&nbsp</span>
 									<ul class="menu-list">
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> FOB</a>
+											<a href="<?=base_url();?>fob_c"><i class="icon-pencil3"></i> FOB</a>
 										</li>
 
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Gaji/Tunjangan</a>
+											<a href="<?=base_url();?>gaji_c"><i class="icon-pencil3"></i> Gaji/Tunjangan</a>
 										</li>
 
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Karyawan</a>
+											<a href="<?=base_url();?>karyawan_c"><i class="icon-pencil3"></i> Karyawan</a>
 										</li>
 
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Transaksi Berulang</a>
+											<a href="<?=base_url();?>transaksi_berulang_c"><i class="icon-pencil3"></i> Transaksi Berulang</a>
 										</li>	
 
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Proses Akhir Bulan</a>
+											<a href="<?=base_url();?>proses_akhir_bulan_c"><i class="icon-pencil3"></i> Proses Akhir Bulan</a>
 										</li>
 									</ul>
 								</div>
 
 								<div class="col-md-3">
+									<span class="menu-heading underlined">&nbsp</span>
 									<ul class="menu-list">
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Kontak</a>
+											<a href="<?=base_url();?>kontak_c"><i class="icon-pencil3"></i> Kontak</a>
 										</li>
 
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Transaksi Favorit</a>
+											<a href="<?=base_url();?>transaksi_favorit_c"><i class="icon-pencil3"></i> Transaksi Favorit</a>
 										</li>
 
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Kalender</a>
+											<a href="<?=base_url();?>kalender_c"><i class="icon-pencil3"></i> Kalender</a>
 										</li>
 
 										<li>
-											<a href="#"><i class="icon-pencil3"></i> Log Aktifitas</a>
+											<a href="<?=base_url();?>log_aktifitas_c"><i class="icon-pencil3"></i> Log Aktifitas</a>
 										</li>
 									</ul>
 								</div>
@@ -184,7 +187,7 @@
 
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-make-group position-left"></i> Page kits <span class="caret"></span>
+						<i class="icon-make-group position-left"></i> Buku Besar <span class="caret"></span>
 					</a>
 
 					<ul class="dropdown-menu width-250">
@@ -215,6 +218,160 @@
 
 						<li>
 							<a href="#"><i class="icon-task"></i> Log Aktifitas Jurnal</a>
+						</li>						
+					</ul>
+				</li>
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-make-group position-left"></i> Kas & Bank <span class="caret"></span>
+					</a>
+
+					<ul class="dropdown-menu width-250">
+						<li class="dropdown-header">Menu</li>						
+						<li>
+							<a href="#"><i class="icon-task"></i> Pembayaran</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Penerimaan</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Transfer Bank</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Rekening Koran</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Histori Bank</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Rekonsiliasi Bank </a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Internet Banking</a>
+						</li>						
+					</ul>
+				</li>
+
+				<li class="dropdown mega-menu mega-menu-wide">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Penjualan <span class="caret"></span></a>
+
+					<div class="dropdown-menu dropdown-content">
+						<div class="dropdown-content-body">
+							<div class="row">
+								<div class="col-md-3">
+									<span class="menu-heading underlined">Menu Penjualan</span>
+									<ul class="menu-list">
+										<li>
+											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Penawaran Penjualan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>proyek_c"><i class="icon-pencil3"></i> Pesanan Penjualan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>pajak_c"><i class="icon-pencil3"></i> Pengiriman Pesanan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>syarat_pembayaran_c"><i class="icon-pencil3"></i>  Uang Muka Penjualan</a>
+										</li>									
+									</ul>
+								</div>
+								<div class="col-md-3">
+									<span class="menu-heading underlined">&nbsp</span>
+									<ul class="menu-list">
+										<li>
+											<a href="<?=base_url();?>fob_c"><i class="icon-pencil3"></i> Faktur Penjualan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>gaji_c"><i class="icon-pencil3"></i> Pembayaran Penjualan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>karyawan_c"><i class="icon-pencil3"></i> Retur Penjualan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>transaksi_berulang_c"><i class="icon-pencil3"></i> Kategori Pelanggan</a>
+										</li>	
+									</ul>
+								</div>
+
+								<div class="col-md-3">
+									<span class="menu-heading underlined">&nbsp</span>
+									<ul class="menu-list">
+										<li>
+											<a href="<?=base_url();?>kontak_c"><i class="icon-pencil3"></i> Kategori Harga</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>transaksi_favorit_c"><i class="icon-pencil3"></i> Pelanggan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>kalender_c"><i class="icon-pencil3"></i> Komisi Penjual</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>log_aktifitas_c"><i class="icon-pencil3"></i> Target Penjualan</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-make-group position-left"></i> Pembelian <span class="caret"></span>
+					</a>
+
+					<ul class="dropdown-menu width-250">
+						<li class="dropdown-header">Menu</li>						
+						<li>
+							<a href="#"><i class="icon-task"></i> Permintaan Pembelian</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Pesanan Pembelian</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Penerimaan Barang</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Uang Muka Pembelian</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Faktur Pembelian</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Pembayaran Pembelian </a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Retur Pembelian</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Kategori Pemasok</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Pemasok</a>
 						</li>						
 					</ul>
 				</li>

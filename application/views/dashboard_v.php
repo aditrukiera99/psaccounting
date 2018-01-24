@@ -473,11 +473,11 @@
 	<div class="page-container">
 		<div class="page-content">
 			<div class="content-wrapper">
-			<?PHP if($view == ""){ ?>
+			<?PHP if($page == ""){ ?>
 			<!-- DASHBOARD -->
 
 			<!-- /DASHBOARD -->
-			<?PHP } else { $this->load->view($view); } ?>
+			<?PHP } else { $this->load->view($page); } ?>
 			</div>
 		</div>
 	</div>

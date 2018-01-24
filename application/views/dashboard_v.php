@@ -115,6 +115,10 @@
 									<span class="menu-heading underlined">Menu Perusahaan</span>
 									<ul class="menu-list">
 										<li>
+											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Cabang</a>
+										</li>
+
+										<li>
 											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Departemen</a>
 										</li>
 
@@ -376,97 +380,132 @@
 					</ul>
 				</li>
 
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-strategy position-left"></i> Starter kit <span class="caret"></span>
-					</a>
+				<li class="dropdown mega-menu mega-menu-wide">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Persedian <span class="caret"></span></a>
 
-					<ul class="dropdown-menu width-200">
-						<li class="dropdown-header">Basic layouts</li>
-						<li class="dropdown-submenu">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-grid2"></i> Columns</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-header highlight">Options</li>
-								<li><a href="starters/1_col.html">One column</a></li>
-								<li><a href="starters/2_col.html">Two columns</a></li>
-								<li class="dropdown-submenu">
-									<a href="#">Three columns</a>
-									<ul class="dropdown-menu">
-										<li class="dropdown-header highlight">Sidebar position</li>
-										<li><a href="starters/3_col_dual.html">Dual sidebars</a></li>
-										<li><a href="starters/3_col_double.html">Double sidebars</a></li>
+					<div class="dropdown-menu dropdown-content">
+						<div class="dropdown-content-body">
+							<div class="row">
+								<div class="col-md-3">
+									<span class="menu-heading underlined">Menu Persediaan</span>
+									<ul class="menu-list">
+										<li>
+											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Pemindahan Barang</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>proyek_c"><i class="icon-pencil3"></i> Penyesuian Persediaan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>pajak_c"><i class="icon-pencil3"></i> Pekerjaan Pesanan</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>syarat_pembayaran_c"><i class="icon-pencil3"></i>  Penambahan Bahan Baku</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>syarat_pembayaran_c"><i class="icon-pencil3"></i>  Penyelesaian Pesanan</a>
+										</li>					
 									</ul>
-								</li>
-								<li><a href="starters/4_col.html">Four columns</a></li>
-							</ul>
-						</li>
-						<li class="dropdown-submenu">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-paragraph-justify3"></i> Navbars</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-header highlight">Fixed navbars</li>
-								<li><a href="starters/layout_navbar_fixed_main.html">Fixed main navbar</a></li>
-								<li><a href="starters/layout_navbar_fixed_secondary.html">Fixed secondary navbar</a></li>
-								<li><a href="starters/layout_navbar_fixed_both.html">Both navbars fixed</a></li>
-							</ul>
-						</li>
-						<li class="dropdown-header">Optional layouts</li>
-						<li><a href="starters/layout_boxed.html"><i class="icon-align-center-horizontal"></i> Fixed width</a></li>
-						<li><a href="starters/layout_sidebar_sticky.html"><i class="icon-flip-vertical3"></i> Sticky sidebar</a></li>
-					</ul>
-				</li>
-			</ul>
+								</div>
+								<div class="col-md-3">
+									<span class="menu-heading underlined">&nbsp</span>
+									<ul class="menu-list">
+										<li>
+											<a href="<?=base_url();?>fob_c"><i class="icon-pencil3"></i> Perintah Stok Opname</a>
+										</li>
 
-			<ul class="nav navbar-nav navbar-nav-material navbar-right">
-				<li>
-					<a href="changelog.html">
-						<i class="icon-history position-left"></i>
-						Changelog
-						<span class="label label-inline position-right bg-success-400">1.6</span>
-					</a>
+										<li>
+											<a href="<?=base_url();?>gaji_c"><i class="icon-pencil3"></i> Hasil Stok Opname</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>karyawan_c"><i class="icon-pencil3"></i> Barang & Jasa</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>transaksi_berulang_c"><i class="icon-pencil3"></i> Gudang</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>transaksi_berulang_c"><i class="icon-pencil3"></i> Satuan Barang</a>
+										</li>	
+									</ul>
+								</div>
+
+								<div class="col-md-3">
+									<span class="menu-heading underlined">&nbsp</span>
+									<ul class="menu-list">
+										<li>
+											<a href="<?=base_url();?>kontak_c"><i class="icon-pencil3"></i> Kategori Barang</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>transaksi_favorit_c"><i class="icon-pencil3"></i> Penyesuaian Harga Jual</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>kalender_c"><i class="icon-pencil3"></i> Harga Pemasok</a>
+										</li>
+
+										<li>
+											<a href="<?=base_url();?>log_aktifitas_c"><i class="icon-pencil3"></i> Barang per Gudang</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
 
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-cog3"></i>
-						<span class="visible-xs-inline-block position-right">Share</span>
-						<span class="caret"></span>
+						<i class="icon-make-group position-left"></i> Aset Tetap <span class="caret"></span>
 					</a>
 
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
-						<li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
-						<li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
-						<li class="divider"></li>
-						<li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+					<ul class="dropdown-menu width-250">
+						<li class="dropdown-header">Menu</li>						
+						<li>
+							<a href="#"><i class="icon-task"></i> Aset Tetap</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Kategori Aset</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Kategori Aset Tetap Pajak</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Perubahan Aset Tetap</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Disposisi Aset Tetap</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Pindah Aset</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-task"></i> Aset per Lokasi</a>
+						</li>						
 					</ul>
 				</li>
+
+				
 			</ul>
+
+			
 		</div>
 	</div>
 	<!-- /second navbar -->
 
 
-	<!-- Page header -->
-	<div class="page-header">
-		<div class="page-header-content">
-			<div class="page-title">
-				<h4>
-					<i class="icon-arrow-left52 position-left"></i>
-					<span class="text-semibold">Home</span> - Dashboard
-					<small class="display-block">Good morning, Victoria Baker!</small>
-				</h4>
-			</div>
-
-			<div class="heading-elements">
-				<div class="heading-btn-group">
-					<a href="#" class="btn btn-link btn-float has-text text-size-small"><i class="icon-bars-alt text-indigo-400"></i><span>Statistics</span></a>
-					<a href="#" class="btn btn-link btn-float has-text text-size-small"><i class="icon-calculator text-indigo-400"></i> <span>Invoices</span></a>
-					<a href="#" class="btn btn-link btn-float has-text text-size-small"><i class="icon-calendar5 text-indigo-400"></i> <span>Schedule</span></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /page header -->
 
 
 	<!-- Page container -->

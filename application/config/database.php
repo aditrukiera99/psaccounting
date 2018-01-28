@@ -51,7 +51,7 @@ $active_record = TRUE;
 // $db['default']['hostname'] = 'localhost';
 // $db['default']['username'] = 'root';
 // $db['default']['password'] = '';
-// $db['default']['database'] = 'akunting_lama';
+// $db['default']['database'] = 'pembelajaran';
 
 $db['default']['hostname'] = '118.98.64.43';
 $db['default']['username'] = 'fauzan';

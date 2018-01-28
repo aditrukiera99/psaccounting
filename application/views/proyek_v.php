@@ -4,14 +4,14 @@
 		<div class="page-title">
 			<h4>
 				<i class="icon-arrow-left52 position-left"></i>
-				<span class="text-semibold">Perusahaan </span> - Departemen
-				<small class="display-block">Data departemen perusahaan</small>
+				<span class="text-semibold">Perusahaan </span> - Proyek
+				<small class="display-block">Data proyek perusahaan</small>
 			</h4>
 		</div>
 
 		<div class="heading-elements">
 			<div class="heading-btn-group" style="margin-top: -10px;">
-				<a href="<?=base_url();?>add_departemen_c" class="btn btn-success btn-float "><i class="icon-plus-circle2"></i><span>Tambah Data</span></a>
+				<a href="<?=base_url();?>add_proyek_c" class="btn btn-success btn-float "><i class="icon-plus-circle2"></i><span>Tambah Data</span></a>
 			</div>
 		</div>
 	</div>
@@ -22,7 +22,7 @@
 <!-- Basic datatable -->
 <div class="panel panel-flat">
 	<div class="panel-heading">
-		<h5 class="panel-title">Data Departemen</h5>
+		<h5 class="panel-title">Data Proyek</h5>
 		<div class="heading-elements">
 			<ul class="icons-list">
         		<li><a data-action="collapse"></a></li>
@@ -34,8 +34,8 @@
 	<table class="table table-bordered datatable-basic">
 		<thead>
 			<tr>
-				<th class="bg-slate">Kode Departemen</th>
-				<th class="bg-slate">Nama Departemen</th>
+				<th class="bg-slate">No Proyek</th>
+				<th class="bg-slate">Nama Proyek</th>
 				<th class="bg-slate">Actions</th>
 			</tr>
 		</thead>
@@ -45,9 +45,9 @@
 				
 			?>
 			<tr>
-				<td><?=$value->ID;?></td>
-				<td><?=$value->DEPARTEMEN;?></td>
-				<td><a href="<?=base_url();?>departemen_c/ubah_data/<?=$value->ID;?>"><button class="btn btn-success"><i class="icon-pencil5"></i> Edit</button></a>
+				<td><?=$value->NO_PROYEK;?></td>
+				<td><?=$value->NAMA_PROYEK;?></td>
+				<td><a href="<?=base_url();?>proyek_c/ubah_data/<?=$value->ID;?>"><button class="btn btn-success"><i class="icon-pencil5"></i> Edit</button></a>
 					<button type="button" onclick="$('#dialog-btn').click(); $('#id_hapus').val('<?=$value->ID;?>');" class="btn btn-warning" data-toggle="modal" data-target="#modal_default">Delete <i class="icon-trash"></i></button></td>
 			</tr>
 			<?php } ?>

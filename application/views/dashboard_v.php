@@ -33,14 +33,48 @@
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/ui/moment/moment.min.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/daterangepicker.js"></script>
 
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/anytime.min.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/pickers/pickadate/legacy.js"></script>
+
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/forms/selects/select2.min.js"></script>
 
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/core/app.js"></script>
-
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/pages/datatables_basic.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/pages/picker_date.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js/pages/form_select2.js"></script>
+	
+	<script type="text/javascript" src="<?=base_url();?>material/assets/js-form.js"></script>
+
 	<script type="text/javascript" src="<?=base_url();?>material/assets/js/plugins/ui/ripple.min.js"></script>
+
 	<!-- /theme JS files -->
+	<style type="text/css">
+		@keyframes bounceIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+	</style>
 
 </head>
 
@@ -111,122 +145,84 @@
 				<li class="dropdown mega-menu mega-menu-wide">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Perusahaan <span class="caret"></span></a>
 
-					<div class="dropdown-menu dropdown-content">
+					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
 						<div class="dropdown-content-body">
 							<div class="row">
-								<div class="col-md-3">
-									<span class="menu-heading underlined">Menu Perusahaan</span>
-									<ul class="menu-list">
-										<li>
-											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Cabang</a>
-										</li>
+								<div class="col-md-12">
 
-										<li>
-											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Departemen</a>
-										</li>
+									<a href="<?=base_url();?>cabang_c"><button type="button" class="btn btn-success btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-office"></i> <span>Cabang</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>proyek_c"><i class="icon-pencil3"></i> Proyek</a>
-										</li>
+									<a href="<?=base_url();?>departemen_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-city"></i> <span>Departemen</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>pajak_c"><i class="icon-pencil3"></i> Pajak</a>
-										</li>
+									<a href="<?=base_url();?>proyek_c"><button type="button" class="btn btn-warning btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-design"></i> <span>Proyek</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>syarat_pembayaran_c"><i class="icon-pencil3"></i> Syarat Pembayaran</a>
-										</li>	
+									<button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Pajak</span></button>
 
-										<li>
-											<a href="<?=base_url();?>pengiriman_c"><i class="icon-pencil3"></i> Pengiriman</a>
-										</li>									
-									</ul>
+									<a href="<?=base_url();?>syarat_pembayaran_c"><button type="button" class="btn btn-primary btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-cash3"></i> <span>Syarat <br> Pembayaran</span></button></a>
+
+									<a href="<?=base_url();?>pengiriman_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Pengiriman</span></button></a>
+
+									<a href="<?=base_url();?>fob_c"><button type="button" class="btn btn-indigo btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;background-color: #5C6BC0;border-color: #5C6BC0;color: #fff;"><i class="icon-color-sampler"></i> <span>FOB</span></button></a>
+
+									<a href="<?=base_url();?>gaji_c"><button type="button" class="btn btn-danger btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;background-color: #EC407A;border-color: #EC407A;"><i class="icon-calculator"></i> <span>Gaji</span></button></a>
+
+									<a href="<?=base_url();?>karyawan_c"><button type="button" class="btn btn-success btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-users"></i> <span>Karyawan</span></button></a>
+
+									<!-- 
+									<button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Kontak</span></button> -->
+									<!-- <button type="button" class="btn btn-primary btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-cash3"></i> <span>Transaksi <br> Favorit</span></button> -->
+									<!-- <button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Kalendar</span></button> -->
+									<button type="button" class="btn btn-indigo btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;background-color: #5C6BC0;border-color: #5C6BC0;color: #fff;"><i class="icon-percent"></i> <span>Log Aktifitas</span></button>
+										
 								</div>
-								<div class="col-md-3">
-									<span class="menu-heading underlined">&nbsp</span>
-									<ul class="menu-list">
-										<li>
-											<a href="<?=base_url();?>fob_c"><i class="icon-pencil3"></i> FOB</a>
-										</li>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
 
-										<li>
-											<a href="<?=base_url();?>gaji_c"><i class="icon-pencil3"></i> Gaji/Tunjangan</a>
-										</li>
-
-										<li>
-											<a href="<?=base_url();?>karyawan_c"><i class="icon-pencil3"></i> Karyawan</a>
-										</li>
-
-										<li>
-											<a href="<?=base_url();?>transaksi_berulang_c"><i class="icon-pencil3"></i> Transaksi Berulang</a>
-										</li>	
-
-										<li>
-											<a href="<?=base_url();?>proses_akhir_bulan_c"><i class="icon-pencil3"></i> Proses Akhir Bulan</a>
-										</li>
-									</ul>
-								</div>
-
-								<div class="col-md-3">
-									<span class="menu-heading underlined">&nbsp</span>
-									<ul class="menu-list">
-										<li>
-											<a href="<?=base_url();?>kontak_c"><i class="icon-pencil3"></i> Kontak</a>
-										</li>
-
-										<li>
-											<a href="<?=base_url();?>transaksi_favorit_c"><i class="icon-pencil3"></i> Transaksi Favorit</a>
-										</li>
-
-										<li>
-											<a href="<?=base_url();?>kalender_c"><i class="icon-pencil3"></i> Kalender</a>
-										</li>
-
-										<li>
-											<a href="<?=base_url();?>log_aktifitas_c"><i class="icon-pencil3"></i> Log Aktifitas</a>
-										</li>
-									</ul>
+									
+									
+									
 								</div>
 							</div>
 						</div>
 					</div>
 				</li>
 
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-make-group position-left"></i> Buku Besar <span class="caret"></span>
-					</a>
+				<li class="dropdown mega-menu mega-menu-wide">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Buku Besar <span class="caret"></span></a>
 
-					<ul class="dropdown-menu width-250">
-						<li class="dropdown-header">Menu</li>						
-						<li>
-							<a href="#"><i class="icon-task"></i> Akun Perkiraan</a>
-						</li>
+					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+						<div class="dropdown-content-body">
+							<div class="row">
+								<div class="col-md-12">
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Pencatatan Beban</a>
-						</li>
+									<a href="<?=base_url();?>akun_c"><button type="button" class="btn btn-success btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-toggle"></i> <span>Akun</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Pencatatan Gaji</a>
-						</li>
+									<a href="<?=base_url();?>pencatatan_beban_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-city"></i> <span>Pencatatan<br>Beban</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Jurnal Umum</a>
-						</li>
+									<a href="<?=base_url();?>pencatatan_gaji_c"><button type="button" class="btn btn-warning btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-design"></i> <span>Pencatatan<br>Gaji</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Anggaran</a>
-						</li>
+									<a href="<?=base_url();?>jurnal_umum_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Jurnal<br>Umum</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Histori Akun</a>
-						</li>
+									<a href="<?=base_url();?>anggaran_pembayaran_c"><button type="button" class="btn btn-primary btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-cash3"></i> <span>Anggaran <br> Pembayaran</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Log Aktifitas Jurnal</a>
-						</li>						
-					</ul>
+									<a href="<?=base_url();?>histori_akun_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Histori<br>Akun</span></button></a>
+
+									<a href="<?=base_url();?>fob_c"><button type="button" class="btn btn-indigo btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;background-color: #5C6BC0;border-color: #5C6BC0;color: #fff;"><i class="icon-color-sampler"></i> <span>Log<br> Jurnal</span></button></a>
+
+										
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
 
 				<li class="dropdown">

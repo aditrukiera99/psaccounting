@@ -1,17 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Departemen_c extends CI_Controller {
+class Proyek_c extends CI_Controller {
 
 	function __construct()
 	{
 		parent::__construct();
-	    $this->load->model('departemen_m','model'); 
+	    $this->load->model('proyek_m','model'); 
 
 	}
 
 	public function index()
 	{
-
+		
 		if($this->input->post('id_hapus')){
 
 			$id   = $this->input->post('id_hapus');
@@ -20,15 +20,16 @@ class Departemen_c extends CI_Controller {
 			
 		}
 
-		$dt = $this->model->get_data_dep();
+		$dt = $this->model->get_data_proyek();
+
 
 		$data = array(
-			'page' => 'departemen_v', 
+			'page' => 'proyek_v',
+			'dt' => $dt, 
 			'master' => '', 
 			'view' => '', 
-			'title' => 'Departemen', 
-			'dt' => $dt, 
-			'post_url' => 'departemen_c',
+			'title' => 'proyek', 
+			'post_url' => 'proyek_c',
 		);
 
 		$this->load->view('dashboard_v', $data);
@@ -46,7 +47,7 @@ class Departemen_c extends CI_Controller {
 			$provinsi	 = $this->input->post('provinsi');
 
 			$this->db->query("
-				UPDATE ak_cabang SET NAMA = '$nama',
+				UPDATE ak_proyek SET NAMA = '$nama',
 									 ALAMAT = '$alamat',
 									 KOTA = '$kota',
 									 PROVINSI = '$provinsi'
@@ -54,25 +55,19 @@ class Departemen_c extends CI_Controller {
 			");
 		}	
 
-		$dt = $this->db->query("SELECT * FROM ak_cabang WHERE ID = '$id'")->row();
+		$dt = $this->db->query("SELECT * FROM ak_proyek WHERE ID = '$id'")->row();
 
 		$data =  array(
-			'page' => "edit_cabang_v", 
-			'title' => "Ubah Cabang", 
+			'page' => "edit_proyek_v", 
+			'title' => "Ubah proyek", 
 			'msg' => $msg,
 			'view' => "",
 			'dt' => $dt,
-			'post_url' => 'cabang_c/ubah_data/'.$id, 
+			'post_url' => 'proyek_c/ubah_data/'.$id, 
 		);
 		
 		$this->load->view('dashboard_v', $data);
 	}
-
-	function get_akun_info(){
-        $id = $this->input->post('id');
-        $get_item = $this->db->query("SELECT * FROM ak_kode_akuntansi WHERE ID = '$id' ")->row();
-        echo json_encode($get_item);
-    }
 }
 
 /* End of file welcome.php */

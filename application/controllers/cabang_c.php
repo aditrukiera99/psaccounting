@@ -1,17 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Departemen_c extends CI_Controller {
+class Cabang_c extends CI_Controller {
 
 	function __construct()
 	{
 		parent::__construct();
-	    $this->load->model('departemen_m','model'); 
+	    $this->load->model('cabang_m','model'); 
 
 	}
 
 	public function index()
 	{
-
+		
 		if($this->input->post('id_hapus')){
 
 			$id   = $this->input->post('id_hapus');
@@ -20,15 +20,16 @@ class Departemen_c extends CI_Controller {
 			
 		}
 
-		$dt = $this->model->get_data_dep();
+		$data_item = $this->model->get_data_cab();
+
 
 		$data = array(
-			'page' => 'departemen_v', 
+			'page' => 'cabang_v',
+			'data_item' => $data_item, 
 			'master' => '', 
 			'view' => '', 
-			'title' => 'Departemen', 
-			'dt' => $dt, 
-			'post_url' => 'departemen_c',
+			'title' => 'Cabang', 
+			'post_url' => 'cabang_c',
 		);
 
 		$this->load->view('dashboard_v', $data);
@@ -67,12 +68,6 @@ class Departemen_c extends CI_Controller {
 		
 		$this->load->view('dashboard_v', $data);
 	}
-
-	function get_akun_info(){
-        $id = $this->input->post('id');
-        $get_item = $this->db->query("SELECT * FROM ak_kode_akuntansi WHERE ID = '$id' ")->row();
-        echo json_encode($get_item);
-    }
 }
 
 /* End of file welcome.php */

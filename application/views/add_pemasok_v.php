@@ -50,9 +50,8 @@
 										<ul class="nav nav-tabs nav-tabs-highlight nav-justified">
 											<li class="active"><a href="#highlighted-justified-tab1" data-toggle="tab">UMUM</a></li>
 											<li><a href="#highlighted-justified-tab2" data-toggle="tab">PEMBELIAN</a></li>
-											<li><a href="#highlighted-justified-tab3" data-toggle="tab">SALDO</a></li>
-											<li><a href="#highlighted-justified-tab4" data-toggle="tab">LAIN - LAIN</a></li>
-											<li><a href="#highlighted-justified-tab5" data-toggle="tab">AKUN</a></li>
+											<li><a href="#highlighted-justified-tab3" data-toggle="tab">PAJAK</a></li>
+											<li><a href="#highlighted-justified-tab4" data-toggle="tab">SALDO</a></li>
 										</ul>
 
 										<div class="tab-content">
@@ -184,6 +183,36 @@
 															<textarea class="form-control" name="deskripsi"></textarea>
 														</div>
 													</div>
+
+													<div class="form-group">
+														<label class="control-label col-lg-2">Akun Hutang</label>
+														<div class="col-lg-10">
+															<select class="select-search" name="kategori_barang">
+																<?php 
+																	foreach ($data_hutang as $key => $value) {
+																		?>
+																		<option value="<?=$value->KODE_AKUN;?>"><?=$value->KODE_AKUN;?> - <?=$value->NAMA_AKUN;?></option>
+																		<?php
+																	}
+																?>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label col-lg-2">Akun Uang Muka</label>
+														<div class="col-lg-10">
+															<select class="select-search" name="kategori_barang">
+																<?php 
+																	foreach ($data_piutang as $key => $value) {
+																		?>
+																		<option value="<?=$value->KODE_AKUN;?>"><?=$value->KODE_AKUN;?> - <?=$value->NAMA_AKUN;?></option>
+																		<?php
+																	}
+																?>
+															</select>
+														</div>
+													</div>
 												</div>
 
 												
@@ -192,53 +221,135 @@
 
 											<div class="tab-pane" id="highlighted-justified-tab3">
 												<div class="form-group">
-													<label class="control-label col-lg-2">No.NPWP</label>
-													<div class="col-lg-10">
+													<label class="control-label col-lg-2">No#</label>
+													<div class="col-lg-7">
 														<input type="text" class="form-control" name="no_npwp" placeholder="Masukkan Nama">
 													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="control-label col-lg-2">Status Pekerja</label>
-													<div class="col-lg-10">
-														<select name="status_pekerja" class="select-search">
-															<option value="Pegawai Tetap">Pegawai Tetap</option>
-															<option value="Pegawai Tidak Tetap">Pegawai Tidak Tetap</option>
-															<option value="Bukan Pegawai - Distributor MLM">Bukan Pegawai - Distributor MLM</option>
-															<option value="Bukan Pegawai - Pegawai Dinas Luar Asuransi">Bukan Pegawai - Pegawai Dinas Luar Asuransi</option>
-															<option value="Bukan Pegawai - Penjaja Barang Dagangan">Bukan Pegawai - Penjaja Barang Dagangan</option>
-															<option value="Bukan Pegawai - Tenaga Ahli">Bukan Pegawai - Tenaga Ahli</option>
-															<option value="Anggota Dewan Komisaris atau Dewan Pengawas">Anggota Dewan Komisaris atau Dewan Pengawas</option>
-															<option value="Bukan Pegawai yang Menerima Imbalan yang Bersifat Berkesinambungan">Bukan Pegawai yang Menerima Imbalan yang Bersifat Berkesinambungan</option>
-															<option value="Bukan Pegawai yang Menerima Imbalan yang Bersifat Berkesinambungan">Bukan Pegawai yang Menerima Imbalan yang Tidak Bersifat Berkesinambungan</option>
-															
-														</select>
+													<div class="col-lg-3">
+														<input type="text" class="form-control" name="nppkp" placeholder="NPPKP">
 													</div>
 												</div>
 
 												<div class="form-group">
-													<label class="control-label col-lg-2">Dikenakan PKTP</label>
+													<label class="control-label col-lg-2">Tipe Pajak</label>
 													<div class="col-lg-10">
-														<input type="chekbox" class="form-control" name="dikenakan_pktp">
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="control-label col-lg-2">Status PKTP</label>
-													<div class="col-lg-10">
-														<select name="status_pktp" class="select-search">
-															<option value="Tidak Kawin (Tidak ada Tanggungan)">Tidak Kawin (Tidak ada Tanggungan)</option>
-															<option value="Tidak Kawin (1 Tanggungan)">Tidak Kawin (1 Tanggungan)</option>
-															<option value="Tidak Kawin (2 Tanggungan)">Tidak Kawin (2 Tanggungan)</option>
-															<option value="Tidak Kawin (3 Tanggungan)">Tidak Kawin (3 Tanggungan)</option>
-															<option value="Kawin (1 Tanggungan)">Kawin (1 Tanggungan)</option>
-															<option value="Kawin (2 Tanggungan)">Kawin (2 Tanggungan)</option>
-															<option value="Kawin (3 Tanggungan)">Kawin (3 Tanggungan)</option>
+														<select name="tipe_pajak" class="select-search">
+															<option value="Inpor BKP">Inpor BKP</option>
+															<option value="Impor BKP Tidak Berwujud">Impor BKP Tidak Berwujud</option>
+															<option value="JKP Luar Pabean">JKP Luar Pabean</option>
+															<option value="Perolehan Dalam Negeri - Bukan Pemungut PPN">Perolehan Dalam Negeri - Bukan Pemungut PPN</option>
+															<option value="Perolehan Dalam Negeri - Pemungut PPN">Perolehan Dalam Negeri - Pemungut PPN</option>
+															<option value="Perolehan Dalam Negeri - DPP Nilai Lain">Perolehan Dalam Negeri - DPP Nilai Lain</option>
+															<option value="Perolehan Dalam Negeri - Penyerahan Lainnya">Perolehan Dalam Negeri - Penyerahan Lainnya</option>
+															<option value="Perolehan Dalam Negeri - Penyerahan Aset">Perolehan Dalam Negeri - Penyerahan Aset</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - Bukan Pemungut PPN">Pajak Masukan Tidak Dapat Dikreditkan - Bukan Pemungut PPN</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - Pemungut Bendahara">Pajak Masukan Tidak Dapat Dikreditkan - Pemungut Bendahara</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - Pemungut PPN">Pajak Masukan Tidak Dapat Dikreditkan - Pemungut PPN</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - DPP Nilai Lain">Pajak Masukan Tidak Dapat Dikreditkan - DPP Nilai Lain</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - Penyerahan Lainnya">Pajak Masukan Tidak Dapat Dikreditkan - Penyerahan Lainnya</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - PPN tidak Dipungut">Pajak Masukan Tidak Dapat Dikreditkan - PPN tidak Dipungut</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - PPN Dibebaskan">Pajak Masukan Tidak Dapat Dikreditkan - PPN Dibebaskan</option>
+															<option value="Pajak Masukan Tidak Dapat Dikreditkan - Penyerahan Aset">Pajak Masukan Tidak Dapat Dikreditkan - Penyerahan Aset</option>
 															
 															
 														</select>
 													</div>
 												</div>
+
+												<div class="form-group">
+													<label class="control-label col-lg-2">Kode Dokumen</label>
+													<div class="col-lg-10">
+														<select name="kode_dokumen" class="select-search">
+															<option value="Faktur Pajak">Faktur Pajak</option>
+															<option value="PIB dan SSP">PIB dan SSP</option>
+															<option value="SSP">SSP</option>
+															<option value="Dokumen yang Dipersilahkan">Dokumen yang Dipersilahkan</option>
+															<option value="PIB">PIB</option>
+															<option value="Digunggung">Digunggung</option>
+														</select>
+													</div>
+												</div>
+
+												
+											</div>
+
+											<div class="tab-pane" id="highlighted-justified-tab4">
+												<div class="col-lg-12">
+													
+													<table id="div1" class="display table table-stripped table-bordered table-hover">
+				                                        <thead>
+				                                        <tr>
+				                                            <th>Tanggal</th>
+				                                            <th>Saldo Awal</th>
+				                                            <th>Syarat Pembayaran</th>
+				                                            <th>Keterangan</th>
+				                                            <th>Action</th>
+				                                        </tr>
+				                                        </thead>
+				                                        <tbody id="tes">
+				                                            <tr id="tr_1" class="tr_utama">
+				                                                <td align="left" style="vertical-align:middle;"> 
+				                                                    <div class="control-group">
+				                                                            <div class="controls">
+				                                                                <input type="text" class="form-control daterange-single" value="<?php echo date('m/d/Y'); ?>" name="tanggal_saldo[]">
+				                                                            </div>
+				                                                    </div>
+				                                                </td>
+
+				                                                <td align="center" style="vertical-align:middle;"> 
+				                                                    <div class="span12">
+				                                                    <div class="controls">
+				                                                        <input class="form-control" required onkeyup="FormatCurrency(this); hitung_total(1);" style="font-size: 18px; text-align:right; width: 80%;" type="text"  value="" name="harga_satuan[]" id="harga_satuan_1">
+				                                                    </div>
+				                                                    </div>
+				                                                </td>
+
+				                                                <td align="center" style="vertical-align:middle;"> 
+				                                                    <div class="span12">
+				                                                    <div class="controls">
+				                                                        <select class="select-search" name="syarat_saldo[]" required>
+				                                                            <option value="">Choose a customer</option>
+				                                                            <?PHP foreach ($data_syarat_pembayaran as $key => $row) { ?>
+				                                                                <option value="<?=$row->ID;?>"><?=$row->NAMA;?></option>
+				                                                            <?PHP } ?>
+				                                                        </select>
+				                                                    </div>
+				                                                    </div>
+				                                                </td>
+
+				                                                <td align="center" style="vertical-align:middle;"> 
+				                                                    <div class="span12">
+				                                                    <div class="controls">
+				                                                        <textarea class="form-control" name="keterangan[]"></textarea>
+				                                                    </div>
+				                                                    </div>
+				                                                </td>
+
+				                                                
+
+				                                                <td align="center" style="vertical-align:middle;"> 
+				                                                    <div class="span12">
+				                                                    <div class="controls">
+				                                                        
+				                                                    </div>
+				                                                    </div>
+				                                                </td>
+
+				                                                
+				                                            </tr>
+				                                        </tbody>
+				                                        <tfoot>
+				                                            <tr>
+				                                                <td colspan="7"><button style="margin-bottom: 15px;" onclick="tambah_data();" type="button" class="btn btn-info"><i class="icon-plus"></i> Tambah Baris Data </button></td>
+				                                            </tr>
+				                                            <tr>
+				                                                <td colspan="7"><input style="float: right;" type="submit" class="btn btn-success" value="Save Transaction" name="checkk"></td>
+				                                            </tr>
+				                                        </tfoot>
+				                                    </table>
+													
+												</div>
+
 											</div>
 
 										</div>
@@ -254,4 +365,91 @@
 							
 						</div>
 					</div>
-<!-- /basic datatable -->
+
+<script type="text/javascript">
+	function hapus_row (id) {
+        $('#tr_'+id).remove();
+        hitung_total_semua();
+    }
+    
+    function tambah_data() {
+    var jml_tr = $('#tr_utama_count').val();
+    var i = parseInt(jml_tr) + 1;
+
+    var coa = $('#copy_ag').html();
+
+    $isi_1 = 
+    '<tr id="tr_1" class="tr_utama">'+
+	'			                                                <td align="left" style="vertical-align:middle;"> '+
+	'			                                                    <div class="control-group">'+
+	'			                                                            <div class="controls">'+
+	'			                        <input type="text" class="form-control daterange-single" value="<?PHP echo date('m/d/Y'); ?>" name="tanggal_saldo[]">'+
+	'			                                                            </div>'+
+	'			                                                    </div>'+
+	'			                                                </td>'+
+
+	'			                                                <td align="center" style="vertical-align:middle;"> '+
+	'			                                                    <div class="span12">'+
+	'			                                                        <div class="control-group">'+
+	'			                                                            <div class="controls">'+
+	'			                                                                <input type="text" name="saldo_awal[]" class="form-control" >'+
+	'			                                                            </div>'+
+	'			                                                        </div>'+
+	'			                                                    </div>'+
+	'			                                                </td>'+
+
+	'			                                                <td align="center" style="vertical-align:middle;"> '+
+	'			                                                    <div class="span12">'+
+	'			                                                    <div class="controls">'+
+	'			                                                        <select class="form-control chzn-select" name="syarat_saldo[]" required>'+
+	'			                                                            <option value="">Choose a customer</option>'+
+	'			                                                            <?PHP foreach ($data_syarat_pembayaran as $key => $row) { ?>'+
+	'			                                                                <option value="<?=$row->ID;?>"><?=$row->NAMA;?></option>'+
+	'			                                                            <?PHP } ?>'+
+	'			                                                        </select>'+
+	'			                                                    </div>'+
+	'			                                                    </div>'+
+	'			                                                </td>'+
+
+	'			                                                <td align="center" style="vertical-align:middle;"> '+
+	'			                                                    <div class="span12">'+
+	'			                                                    <div class="controls">'+
+	'			                                                        <textarea class="form-control" name="keterangan[]"></textarea>'+
+	'			                                                    </div>'+
+	'			                                                    </div>'+
+	'			                                                </td>'+
+
+	'			                                                <td align="center" style="vertical-align:middle;"> '+
+	'			                                                    <div class="span12">'+
+	'			                                                    <div class="controls">'+
+	'			                                                        <input class="form-control" required onkeyup="FormatCurrency(this); hitung_total(1);" style="font-'+'size: 18px; text-align:right; width: 80%;" type="text"  value="" name="harga_satuan[]" id="'+'harga_satuan_1">'+
+	'			                                                    </div>'+
+	'			                                                    </div>'+
+	'			                                                </td>'+
+
+	'			                                                <td align="center" style="vertical-align:middle;"> '+
+	'			                                                    <div class="span12">'+
+	'			                                                    <div class="controls">'+
+	'			                                                        <input type="text" name="" class="form-control">'+
+	'			                                                    </div>'+
+	'			                                                    </div>'+
+	'			                                                </td>'+
+
+	'			                                                <td align="center" style="vertical-align:middle;"> '+
+	'			                                                    <div class="span12">'+
+	'			                                                    <div class="controls">'+
+	'			                                                        '+
+	'			                                                    </div>'+
+	'			                                                    </div>'+
+	'			                                                </td>'+
+	'			                                            </tr>';
+
+    $('#tes').append($isi_1);
+
+    $('#tr_'+i).find('.cek_select').attr('class', 'cek_select_'+i);
+
+    $('#tr_utama_count').val(i);
+    $(".cek_select_"+i).chosen();
+
+}
+</script>

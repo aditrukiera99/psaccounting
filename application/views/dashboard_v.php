@@ -145,7 +145,7 @@
 				<li class="dropdown mega-menu mega-menu-wide">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Perusahaan <span class="caret"></span></a>
 
-					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+					<div class="dropdown-menu dropdown-content" style="background-color: #dedede;">
 						<div class="dropdown-content-body">
 							<div class="row">
 								<div class="col-md-12">
@@ -191,7 +191,7 @@
 				<li class="dropdown mega-menu mega-menu-wide">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Buku Besar <span class="caret"></span></a>
 
-					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+					<div class="dropdown-menu dropdown-content" style="background-color: #dedede;">
 						<div class="dropdown-content-body">
 							<div class="row">
 								<div class="col-md-12">
@@ -230,7 +230,7 @@
 						<i class="icon-make-group position-left"></i> Kas & Bank <span class="caret"></span>
 					</a>
 
-					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+					<div class="dropdown-menu dropdown-content" style="background-color: #dedede;">
 						<div class="dropdown-content-body">
 							<div class="row">
 								<div class="col-md-12">
@@ -339,7 +339,7 @@
 				<li class="dropdown mega-menu mega-menu-wide">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Pembelian <span class="caret"></span></a>
 
-					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+					<div class="dropdown-menu dropdown-content" style="background-color: #dedede;">
 						<div class="dropdown-content-body">
 							<div class="row">
 								<div class="col-md-12">
@@ -374,7 +374,7 @@
 				<li class="dropdown mega-menu mega-menu-wide">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Persediaan <span class="caret"></span></a>
 
-					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+					<div class="dropdown-menu dropdown-content" style="background-color: #dedede;">
 						<div class="dropdown-content-body">
 							<div class="row">
 								<div class="col-md-12">

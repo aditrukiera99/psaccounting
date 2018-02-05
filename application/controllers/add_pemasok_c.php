@@ -38,6 +38,8 @@ class Add_pemasok_c extends CI_Controller {
 		$data_kategori = $this->db->query("SELECT * FROM ak_kategori_pemasok ORDER BY ID DESC")->result();
 		$data_cabang = $this->db->query("SELECT * FROM ak_cabang ORDER BY ID DESC")->result();
 		$data_syarat_pembayaran = $this->db->query("SELECT * FROM ak_syarat_pembayaran ORDER BY ID DESC")->result();
+		$data_hutang = $this->db->query("SELECT * FROM ak_kode_akuntansi WHERE KATEGORI = 'Hutang Usaha' ORDER BY ID DESC")->result();
+		$data_piutang = $this->db->query("SELECT * FROM ak_kode_akuntansi WHERE KATEGORI = 'Piutang Usaha' ORDER BY ID DESC")->result();
 
 		$data = array(
 			'page' => 'add_pemasok_v',
@@ -45,6 +47,8 @@ class Add_pemasok_c extends CI_Controller {
 			'data_kategori' => $data_kategori, 
 			'data_satuan' => $data_satuan, 
 			'data_cabang' => $data_cabang, 
+			'data_hutang' => $data_hutang, 
+			'data_piutang' => $data_piutang, 
 			'data_syarat_pembayaran' => $data_syarat_pembayaran, 
 			'msg' => $msg,
 			'master' => '', 

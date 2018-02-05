@@ -1,3 +1,16 @@
+<script>
+	function tipeer(id){
+		$('.display').hide();
+		if(id == "Departemen"){
+
+			$("#departemen").show();
+
+		}else if(id == "Proyek"){
+
+			$("#proyek").show();
+		}
+	}
+</script>
 <!-- Page header -->
 <style type="text/css">
 .data_item:hover{
@@ -21,8 +34,8 @@
 		<div class="page-title">
 			<h4>
 				<a href="<?=base_url()?>cabang_c"><i class="icon-arrow-left52 position-left"></i></a>
-				<span class="text-semibold">Perusahaan </span> - Departemen
-				<small class="display-block">Data deparetemen perusahaan</small>
+				<span class="text-semibold">Perusahaan </span> - Anggaran Pembayaran
+				<small class="display-block">Data Anggaran Pembayaran perusahaan</small>
 			</h4>
 		</div>
 
@@ -66,23 +79,66 @@
 									<legend class="text-bold">Data Baru</legend>
 
 									<div class="form-group">
-										<label class="control-label col-lg-2">Tanggal</label>
-										<div class="col-lg-10">
-											<input type="text" name="tgl"  class="form-control daterange-single" value="<?php echo date('m/d/Y'); ?>">
+										<label class="control-label col-lg-2">Bulan</label>
+										<div class="col-lg-5">
+											<select name="bulan" class="select-search">
+												<option value="Januari">Januari</option>
+												<option value="Februari">Februari</option>
+												<option value="Maret">Maret</option>
+												<option value="April">April</option>
+												<option value="Mei">Mei</option>
+												<option value="Juni">Juni</option>
+												<option value="Juli">Juli</option>
+												<option value="Agustus">Agustus</option>
+												<option value="September">September</option>
+												<option value="Oktober">Oktober</option>
+												<option value="November">November</option>
+												<option value="Desember">Desember</option>
+											</select>
+										</div>
+										<div class="col-lg-2	">
+											<input type="text" class="form-control" name="tahun" value="<?php echo date('Y');?>" >
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-lg-2">Nomor</label>
+										<label class="control-label col-lg-2">Tipe</label>
 										<div class="col-lg-10">
-											<input type="text" class="form-control" name="nomor" placeholder="Masukkan nomor" required>
+											<select name="tipe" class="select-search" onchange="tipeer(this.value)">
+												<option value="Umum">UMUM</option>
+												<option value="Departemen">Per Departemen</option>
+												<option value="Proyek">Per Proyek</option>
+											</select>
 										</div>
 									</div>
 
-									<div class="form-group">
-										<label class="control-label col-lg-2">Tipe Transaksi</label>
+									<div class="display form-group" id="departemen" style="display: none;">
+										<label class="control-label col-lg-2">Departemen</label>
 										<div class="col-lg-10">
-											<input type="text" class="form-control" name="nama_manajer" value="JURNAL UMUM" readonly>
+											<select class="select-search" name="departemen">
+												<?php 
+													foreach ($data_item as $key => $value) {
+														?>
+														<option value="<?=$value->ID;?>"><?=$value->DEPARTEMEN;?></option>
+														<?php
+													}
+												?>	
+											</select>
+										</div>
+									</div>
+
+									<div class="display form-group" id="proyek" style="display: none;">
+										<label class="control-label col-lg-2">Proyek</label>
+										<div class="col-lg-10">
+											<select class="select-search" name="proyek">
+												<?php 
+													foreach ($data_proyek as $key => $value) {
+														?>
+														<option value="<?=$value->ID;?>"><?=$value->NAMA_PROYEK;?></option>
+														<?php
+													}
+												?>	
+											</select>
 										</div>
 									</div>
 
@@ -102,9 +158,8 @@
                                                     <thead>
                                                         <tr>
                                                             <th class="bg-success">KODE</th>
-                                                            <th class="bg-success" style="width: 50%;">NAMA</th>
-                                                            <th class="bg-success" style="width: 20%;">DEBIT</th>
-                                                            <th class="bg-success" style="width: 20%;">KREDIT</th>
+                                                            <th class="bg-success" style="width: 50%;">BEBAN/PENDAPATAN</th>
+                                                            <th class="bg-success" style="width: 20%;">ANGGARAN</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody id="item_row">
@@ -112,13 +167,7 @@
                                                             <td style="vertical-align: middle; text-align: center;" colspan="6">Please choose an item</td>
                                                         </tr>
                                                     </tbody>
-                                                    <tfoot>
-                                                    	<tr>
-                                                    		<td class="" colspan="2">Total</td>
-                                                    		<td class="" ><input type="hidden" name="debit_tota" id="debit_tot"><h4 id="debit_txt"></h4></td>
-                                                    		<td class="" ><input type="hidden" name="kredit_tota" id="kredit_tot"><h4 id="kredit_txt"></h4></td>
-                                                    	</tr>
-                                                    </tfoot>
+                                                    
                                                 </table>
 										</div>
 									</div>
@@ -189,9 +238,7 @@
                                 '<td style="vertical-align: middle;">'+
                                 	'<input id="jumlah_'+id2+'" value="1" class="form-control" type="text" name="jumlah[]" onkeyup="FormatCurrency(this);hitung_total_semua();" style="width: 100%; text-align: center;" required>'+
                                 '</td>'+
-                                '<td style="vertical-align: middle;">'+
-                                	'<input id="qty_'+id2+'" value="1" class="form-control" type="text" name="qty[]" onkeyup="FormatCurrency(this);hitung_total_semua_2();" style="width: 100%; text-align: center;" required>'+
-                                '</td>'+
+                                
                                 
                             '</tr>';
 
@@ -215,20 +262,6 @@
 
 	    $('#debit_tot').val(sum);
 	    $('#debit_txt').html('Rp. '+acc_format(sum, ""));
-	}
-
-	function hitung_total_semua_2(){
-		var sum = 0;
-		
-		$("input[name='qty[]']").each(function(idx, elm) {
-			var tot = elm.value.split(',').join('');
-			if(tot > 0){
-	    		sum += parseFloat(tot);
-			}
-	    });
-
-	    $('#kredit_tot').val(sum);
-	    $('#kredit_txt').html('Rp. '+acc_format(sum, ""));
 	}
 
 	function acc_format(n, currency) {

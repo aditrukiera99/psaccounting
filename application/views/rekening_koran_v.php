@@ -1,3 +1,4 @@
+
 <!-- Page header -->
 <style type="text/css">
 .data_item:hover{
@@ -21,8 +22,8 @@
 		<div class="page-title">
 			<h4>
 				<a href="<?=base_url()?>cabang_c"><i class="icon-arrow-left52 position-left"></i></a>
-				<span class="text-semibold">Perusahaan </span> - Departemen
-				<small class="display-block">Data deparetemen perusahaan</small>
+				<span class="text-semibold">Buku Besar </span> - Histori Akun
+				<small class="display-block">Data Histori Akun Perusahaan</small>
 			</h4>
 		</div>
 
@@ -66,45 +67,53 @@
 									<legend class="text-bold">Data Baru</legend>
 
 									<div class="form-group">
-										<label class="control-label col-lg-2">Tanggal</label>
+										<label class="control-label col-lg-2">Kode Akun</label>
 										<div class="col-lg-10">
+											<select name="kas_bank" class="select-search">
+												<?php 
+													foreach ($data_akun as $key => $value) {
+														?>
+														<option value="<?=$value->KODE_AKUN;?>"><?=$value->KODE_AKUN;?> - <?=$value->NAMA_AKUN;?></option>
+														<?php
+													}
+												?>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-lg-2">Tanggal</label>
+										<div class="col-lg-4">
+											<input type="text" name="tgl"  class="form-control daterange-single" value="<?php echo date('m/d/Y'); ?>">
+										</div>
+										<label class="control-label col-lg-1 " style="text-align: center;">S / D</label>
+										<div class="col-lg-4">
 											<input type="text" name="tgl"  class="form-control daterange-single" value="<?php echo date('m/d/Y'); ?>">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-lg-2">Nomor</label>
-										<div class="col-lg-10">
-											<input type="text" class="form-control" name="nomor" placeholder="Masukkan nomor" required>
+										<div class="col-lg-12">
+											<div class="text-left">
+												<button type="submit" class="btn btn-primary">Search <i class="icon-arrow-right14 position-right"></i></button>
+											</div>
 										</div>
 									</div>
-
-									<div class="form-group">
-										<label class="control-label col-lg-2">Tipe Transaksi</label>
-										<div class="col-lg-10">
-											<input type="text" class="form-control" name="nama_manajer" value="JURNAL UMUM" readonly>
-										</div>
-									</div>
-
-									
-
-								
-									<legend class="text-bold">Rincian Jurnal</legend>
 
 									<div class="form-group">
 										<div class="col-lg-12">
-											<button type="button" class="btn btn-labeled btn-success" data-toggle="modal" data-target="#large"><i class="icon-plus-circle2"></i> Add Item
-                                            </button>
+											
 
                                             <br>
                                                 <br>
                                                 <table class="table table-bordered table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th class="bg-success">KODE</th>
-                                                            <th class="bg-success" style="width: 50%;">NAMA</th>
-                                                            <th class="bg-success" style="width: 20%;">DEBIT</th>
-                                                            <th class="bg-success" style="width: 20%;">KREDIT</th>
+                                                            <th class="bg-success" style="width: 20%;">AKUN</th>
+                                                            <th class="bg-success" style="width: 30%;">NAMA AKUN</th>
+                                                            <th class="bg-success" style="width: 20%;">DEPARTEMEN</th>
+                                                            <th class="bg-success" style="width: 20%;">PROYEK</th>
+                                                            <th class="bg-success" style="width: 10%;">NILAI</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody id="item_row">
@@ -112,22 +121,14 @@
                                                             <td style="vertical-align: middle; text-align: center;" colspan="6">Please choose an item</td>
                                                         </tr>
                                                     </tbody>
-                                                    <tfoot>
-                                                    	<tr>
-                                                    		<td class="" colspan="2">Total</td>
-                                                    		<td class="" ><input type="hidden" name="debit_tota" id="debit_tot"><h4 id="debit_txt"></h4></td>
-                                                    		<td class="" ><input type="hidden" name="kredit_tota" id="kredit_tot"><h4 id="kredit_txt"></h4></td>
-                                                    	</tr>
-                                                    </tfoot>
+                                                    
                                                 </table>
 										</div>
 									</div>
 
 								</fieldset>
 
-								<div class="text-right">
-									<button type="submit" class="btn btn-primary">Submit <i class="icon-arrow-right14 position-right"></i></button>
-								</div>
+								
 							</form>
 						</div>
 					</div>
@@ -186,12 +187,36 @@
                                 '<input type="hidden" name="nama_akun[]" value="'+res.NAMA_AKUN+'"/>'+
                                 '<td style="vertical-align: middle;">'+res.KODE_AKUN+'</td>'+
                                 '<td style="vertical-align: middle;">'+res.NAMA_AKUN+'</td>'+
-                                '<td style="vertical-align: middle;">'+
+                                
+
+                                '<td align="left" style="vertical-align:middle;"> '+
+		'		           <div class="control-group">'+
+		'		                     <div class="controls">'+
+		'		                                                                <select name="kode_akun" class="select-search">'+
+		'		                                                                	<?php foreach ($data_departemen as $key => $value) { ?>'+
+		'		                                   <option value="<?=$value->ID;?>"><?=$value->DEPARTEMEN;?></option>'+
+		'		                                                                	<?php } ?>'+
+		'		                                                                </select>'+
+		'		                                                            </div>'+
+		'		                                                    </div>'+
+		'		                                                </td>'+
+
+		'<td align="left" style="vertical-align:middle;"> '+
+		'		           <div class="control-group">'+
+		'		                     <div class="controls">'+
+		'		                                                                <select name="kode_akun" class="select-search">'+
+		'		                                                                	<?php foreach ($data_proyek as $key => $value) { ?>'+
+		'		                                   <option value="<?=$value->ID;?>"><?=$value->NAMA;?></option>'+
+		'		                                                                	<?php } ?>'+
+		'		                                                                </select>'+
+		'		                                                            </div>'+
+		'		                                                    </div>'+
+		'		                                                </td>'+
+
+		'<td style="vertical-align: middle;">'+
                                 	'<input id="jumlah_'+id2+'" value="1" class="form-control" type="text" name="jumlah[]" onkeyup="FormatCurrency(this);hitung_total_semua();" style="width: 100%; text-align: center;" required>'+
                                 '</td>'+
-                                '<td style="vertical-align: middle;">'+
-                                	'<input id="qty_'+id2+'" value="1" class="form-control" type="text" name="qty[]" onkeyup="FormatCurrency(this);hitung_total_semua_2();" style="width: 100%; text-align: center;" required>'+
-                                '</td>'+
+                                
                                 
                             '</tr>';
 
@@ -215,20 +240,6 @@
 
 	    $('#debit_tot').val(sum);
 	    $('#debit_txt').html('Rp. '+acc_format(sum, ""));
-	}
-
-	function hitung_total_semua_2(){
-		var sum = 0;
-		
-		$("input[name='qty[]']").each(function(idx, elm) {
-			var tot = elm.value.split(',').join('');
-			if(tot > 0){
-	    		sum += parseFloat(tot);
-			}
-	    });
-
-	    $('#kredit_tot').val(sum);
-	    $('#kredit_txt').html('Rp. '+acc_format(sum, ""));
 	}
 
 	function acc_format(n, currency) {

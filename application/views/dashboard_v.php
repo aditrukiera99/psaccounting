@@ -225,41 +225,43 @@
 					</div>
 				</li>
 
-				<li class="dropdown">
+				<li class="dropdown mega-menu mega-menu-wide">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-make-group position-left"></i> Kas & Bank <span class="caret"></span>
 					</a>
 
-					<ul class="dropdown-menu width-250">
-						<li class="dropdown-header">Menu</li>						
-						<li>
-							<a href="#"><i class="icon-task"></i> Pembayaran</a>
-						</li>
+					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+						<div class="dropdown-content-body">
+							<div class="row">
+								<div class="col-md-12">
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Penerimaan</a>
-						</li>
+									<a href="<?=base_url();?>pembayaran_c"><button type="button" class="btn btn-success btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-toggle"></i> <span>Pembayaran</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Transfer Bank</a>
-						</li>
+									<a href="<?=base_url();?>penerimaan_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-city"></i> <span>Penerimaan</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Rekening Koran</a>
-						</li>
+									<a href="<?=base_url();?>transfer_bank_c"><button type="button" class="btn btn-warning btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-design"></i> <span>Transfer<br>Bank</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Histori Bank</a>
-						</li>
+									<a href="<?=base_url();?>rekening_koran_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Rekening<br>Koran</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Rekonsiliasi Bank </a>
-						</li>
+									<a href="<?=base_url();?>histori_bank_c"><button type="button" class="btn btn-primary btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-cash3"></i> <span>Histori<br>Bank</span></button></a>
 
-						<li>
-							<a href="#"><i class="icon-task"></i> Internet Banking</a>
-						</li>						
-					</ul>
+									<a href="<?=base_url();?>rekonsiliasi_bank_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Rekonsiliasi<br>Bank</span></button></a>
+
+									<a href="<?=base_url();?>internet_banking_c"><button type="button" class="btn btn-danger btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Internet<br>Banking</span></button></a>
+
+										
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
 
 				<li class="dropdown mega-menu mega-menu-wide">
@@ -334,6 +336,39 @@
 					</div>
 				</li>
 
+				<li class="dropdown mega-menu mega-menu-wide">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Pembelian <span class="caret"></span></a>
+
+					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
+						<div class="dropdown-content-body">
+							<div class="row">
+								<div class="col-md-12">
+
+									<a href="<?=base_url();?>permintaan_pembelian_c"><button type="button" class="btn btn-success btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-toggle"></i> <span>Permintaan<br>Pembelian</span></button></a>
+
+									<a href="<?=base_url();?>pesanan_pembelian_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-city"></i> <span>Pesanan<br>Pembelian</span></button></a>
+
+									<a href="<?=base_url();?>penerimaan_barang_c"><button type="button" class="btn btn-warning btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-design"></i> <span>Penerimaan<br>Barang</span></button></a>
+
+									<a href="<?=base_url();?>uang_muka_pembelian_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Uang Muka<br>Pembelian</span></button></a>
+
+									<a href="<?=base_url();?>faktur_pembelian_c"><button type="button" class="btn btn-primary btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-cash3"></i> <span>Faktur <br> Pembelian</span></button></a>
+
+									<a href="<?=base_url();?>pembayaran_pembelian_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Pembayaran<br>Pembelian</span></button></a>
+
+									<a href="<?=base_url();?>retur_pembelian_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Retur<br>Pembelian</span></button></a>
+
+									<a href="<?=base_url();?>kategori_pemasok_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Kategori<br>Pemasok</span></button></a>
+
+									<a href="<?=base_url();?>pemasok_c"><button type="button" class="btn btn-indigo btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;background-color: #5C6BC0;border-color: #5C6BC0;color: #fff;"><i class="icon-color-sampler"></i> <span>Pemasok</span></button></a>
+
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</li>
+
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-make-group position-left"></i> Pembelian <span class="caret"></span>
@@ -380,79 +415,48 @@
 				</li>
 
 				<li class="dropdown mega-menu mega-menu-wide">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Persedian <span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Persediaan <span class="caret"></span></a>
 
-					<div class="dropdown-menu dropdown-content">
+					<div class="dropdown-menu dropdown-content" style="background-color: #444444;">
 						<div class="dropdown-content-body">
 							<div class="row">
-								<div class="col-md-3">
-									<span class="menu-heading underlined">Menu Persediaan</span>
-									<ul class="menu-list">
-										<li>
-											<a href="<?=base_url();?>departemen_c"><i class="icon-pencil3"></i> Pemindahan Barang</a>
-										</li>
+								<div class="col-md-12">
 
-										<li>
-											<a href="<?=base_url();?>proyek_c"><i class="icon-pencil3"></i> Penyesuian Persediaan</a>
-										</li>
+									<a href="<?=base_url();?>pemindahan_barang_c"><button type="button" class="btn btn-success btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-toggle"></i> <span>Pemindahan<br>Barang</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>pajak_c"><i class="icon-pencil3"></i> Pekerjaan Pesanan</a>
-										</li>
+									<a href="<?=base_url();?>penyesuaian_persediaan_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-city"></i> <span>Penyesuaian<br>Persediaan</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>syarat_pembayaran_c"><i class="icon-pencil3"></i>  Penambahan Bahan Baku</a>
-										</li>
+									<a href="<?=base_url();?>pekerjaan_pesanan_c"><button type="button" class="btn btn-warning btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-design"></i> <span>Pekerjaan<br>Pesanan</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>syarat_pembayaran_c"><i class="icon-pencil3"></i>  Penyelesaian Pesanan</a>
-										</li>					
-									</ul>
+									<a href="<?=base_url();?>penambahan_bahan_baku_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Penambahan<br>Bahan Baku</span></button></a>
+
+									<a href="<?=base_url();?>penyelesaian_pesanan_c"><button type="button" class="btn btn-primary btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-cash3"></i> <span>Penyelesiaan <br> Pesanan</span></button></a>
+
+									<a href="<?=base_url();?>perintah_stock_opname_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Perintah<br>Stock Opname</span></button></a>
+
+									<a href="<?=base_url();?>hasil_stock_opname_c"><button type="button" class="btn btn-indigo btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;background-color: #5C6BC0;border-color: #5C6BC0;color: #fff;"><i class="icon-color-sampler"></i> <span>Hasil<br>Stock Opname</span></button></a>
+
+										
 								</div>
-								<div class="col-md-3">
-									<span class="menu-heading underlined">&nbsp</span>
-									<ul class="menu-list">
-										<li>
-											<a href="<?=base_url();?>fob_c"><i class="icon-pencil3"></i> Perintah Stok Opname</a>
-										</li>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
 
-										<li>
-											<a href="<?=base_url();?>gaji_c"><i class="icon-pencil3"></i> Hasil Stok Opname</a>
-										</li>
+									
+									<a href="<?=base_url();?>barang_jasa_c"><button type="button" class="btn btn-success btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-toggle"></i> <span>Barang<br>Jasa</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>karyawan_c"><i class="icon-pencil3"></i> Barang & Jasa</a>
-										</li>
+									<a href="<?=base_url();?>gudang_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-city"></i> <span>Gudang</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>transaksi_berulang_c"><i class="icon-pencil3"></i> Gudang</a>
-										</li>
+									<a href="<?=base_url();?>satuan_c"><button type="button" class="btn btn-warning btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-design"></i> <span>Satuan<br>Barang</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>transaksi_berulang_c"><i class="icon-pencil3"></i> Satuan Barang</a>
-										</li>	
-									</ul>
-								</div>
+									<a href="<?=base_url();?>kategori_barang_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-percent"></i> <span>Kategori<br>Barang</span></button></a>
 
-								<div class="col-md-3">
-									<span class="menu-heading underlined">&nbsp</span>
-									<ul class="menu-list">
-										<li>
-											<a href="<?=base_url();?>kontak_c"><i class="icon-pencil3"></i> Kategori Barang</a>
-										</li>
+									<a href="<?=base_url();?>penyesuaian_harga_jual_c"><button type="button" class="btn btn-primary btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-cash3"></i> <span>Penyesuaian<br>Harga Jual</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>transaksi_favorit_c"><i class="icon-pencil3"></i> Penyesuaian Harga Jual</a>
-										</li>
+									<a href="<?=base_url();?>harga_pemasok_c"><button type="button" class="btn btn-info btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;"><i class="icon-truck"></i> <span>Harga<br>Pemasok</span></button></a>
 
-										<li>
-											<a href="<?=base_url();?>kalender_c"><i class="icon-pencil3"></i> Harga Pemasok</a>
-										</li>
-
-										<li>
-											<a href="<?=base_url();?>log_aktifitas_c"><i class="icon-pencil3"></i> Barang per Gudang</a>
-										</li>
-									</ul>
+									<a href="<?=base_url();?>barang_per_gudang_c"><button type="button" class="btn btn-indigo btn-float btn-float-lg legitRipple" style="margin:8px 8px 8px 8px;width: 140px;height:110px;background-color: #5C6BC0;border-color: #5C6BC0;color: #fff;"><i class="icon-color-sampler"></i> <span>Barang per<br>Gudang</span></button></a>
+									
 								</div>
 							</div>
 						</div>

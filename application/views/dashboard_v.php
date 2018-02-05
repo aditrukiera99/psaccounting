@@ -369,50 +369,7 @@
 					</div>
 				</li>
 
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-make-group position-left"></i> Pembelian <span class="caret"></span>
-					</a>
-
-					<ul class="dropdown-menu width-250">
-						<li class="dropdown-header">Menu</li>						
-						<li>
-							<a href="#"><i class="icon-task"></i> Permintaan Pembelian</a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Pesanan Pembelian</a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Penerimaan Barang</a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Uang Muka Pembelian</a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Faktur Pembelian</a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Pembayaran Pembelian </a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Retur Pembelian</a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Kategori Pemasok</a>
-						</li>
-
-						<li>
-							<a href="#"><i class="icon-task"></i> Pemasok</a>
-						</li>						
-					</ul>
-				</li>
+				
 
 				<li class="dropdown mega-menu mega-menu-wide">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-office position-left"></i> Persediaan <span class="caret"></span></a>
